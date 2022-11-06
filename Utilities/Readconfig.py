@@ -23,6 +23,11 @@ class Readconfig:
         return url
 
     @staticmethod
+    def geturl3():
+        url = config.get('common info', 'baseURL3')
+        return url
+
+    @staticmethod
     def getregaccount1():
         reg_account = config.get('common info', 'reg1_account')
         return reg_account
@@ -106,4 +111,35 @@ class Readconfig:
     def addedproducttext1():
         ftext = config.get('common info', 'productadddedtext1')
         return ftext
+
+    @staticmethod
+    def addedproducttext2():
+        ftext = config.get('common info', 'productadddedtext2')
+        return ftext
+
+    @staticmethod
+    def dresstitle1():
+        text = config.get('common info', 'casualdress1')
+        return text
+
+    @staticmethod
+    def ordercarttitle1():
+        text = config.get('common info', 'carttitle1')
+        return text
+
+    @staticmethod
+    def ordercartdeletetext1():
+        text = config.get('common info', 'orderdeletetext1')
+        return text
+
+    @staticmethod
+    def ordercartemptytext1():
+        text = config.get('common info', 'cartemptytext1')
+        return text
+
+    @staticmethod
+    def confirmordertext1():
+        text = config.get('common info', 'orderconfirmtext')
+        return text
+
 

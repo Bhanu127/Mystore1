@@ -36,3 +36,25 @@ class BaseClass:
     def idselect2(self,webelement,value):
         dropdown = Select(self.driver.find_element("id", webelement))
         return dropdown.select_by_visible_text(value)
+
+    def compareproducttext1(self, a, b):
+        if a == b:
+            assert True
+        else:
+            assert False
+
+    def compareproducttext2(self, a, b, c):
+        if a == b == c:
+            assert True
+            self.log.info("******Both values are equal********")
+        else:
+            self.log.error("*******Both values are not equal********")
+            assert False
+
+    def listvalue(self, a):
+        list = []
+        for i in a:
+            list.append(i.text)
+        return list[1:len(a)-1]
+
+

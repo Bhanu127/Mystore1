@@ -20,6 +20,7 @@ class Registration:
     errortext2 = "//p[normalize-space()='There are 3 errors']"
     errorlist = "//div[@class='alert alert-danger']//ol//li"
 
+
     def __init__(self , driver):
         self.driver = driver
 

@@ -9,7 +9,9 @@ class Orderlist:
     selectorder = "//ul[@class ='product_list grid row']/li"
     producttext1 = "//span[text()='There is 1 product.']"
     addcart = "//span[normalize-space()='Add to cart']"
-    productadded1 = "//h2[normalize-space()='Product successfully added to your shopping cart']/i"
+    checkout1 =  "//a[@title='Proceed to checkout']"
+    addedproducttext1 = "//h2[normalize-space()='Product successfully added to your shopping cart']"
+
 
     def __init__(self , driver):
         self.driver = driver
@@ -43,6 +45,9 @@ class Orderlist:
         return self.driver.find_element(By.XPATH, self.addcart).click()
 
     def productadd1(self):
-        return self.driver.find_element(By.XPATH, self.productadded1)
+        return self.driver.find_element(By.XPATH, self.checkout1).click()
+
+    def productaddedtext1(self):
+        return self.driver.find_element(By.XPATH,self.addedproducttext1).text
 
 
